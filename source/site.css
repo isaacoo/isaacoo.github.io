@@ -4780,7 +4780,7 @@ select.form-control::-ms-expand {
 	display: none;
 }
 .post_view #lg-zoom-in,.post_view #lg-zoom-out {
-	display: block;
+	display: none;
 }
 .lg-actions .lg-next, .lg-actions .lg-prev {
 	background-color: rgba(0, 0, 0, 0.10);
