@@ -12505,8 +12505,8 @@
 							data-widget-parent-is-mobile="Y">
 							<div
 								class="widget image  _image_wrap text_position_bottom hover_text_position_bottom visibility hover_image_hidden hover_img_hide   ">
-								<div class="_img_box img_wrap"><img
-										id="img_w2024071507b457f82577c" src="./source/22b672265732d.png"
+								<div class="_img_box img_wrap"><img id="img_w2024071507b457f82577c"
+										src="./source/22b672265732d.png"
 										style="visibility: visible; image-rendering: -webkit-optimize-contrast; display: block; width: 100%; height: auto; margin-top: 0px;"
 										class=" org_image" alt="">
 									<div class="_hover_image hover_img"
@@ -12708,8 +12708,8 @@
 							data-widget-parent-is-mobile="Y">
 							<div
 								class="widget image  _image_wrap text_position_bottom hover_text_position_bottom visibility hover_image_hidden hover_img_hide   ">
-								<div class="_img_box img_wrap"><img
-										id="img_w2024071517211105f4c78" src="./source/49401b3de9794.png"
+								<div class="_img_box img_wrap"><img id="img_w2024071517211105f4c78"
+										src="./source/49401b3de9794.png"
 										style="visibility: visible; image-rendering: -webkit-optimize-contrast; display: block; width: 100%; height: auto;"
 										class=" org_image" alt="">
 								</div>
@@ -12729,8 +12729,8 @@
 							data-widget-parent-is-mobile="Y">
 							<div
 								class="widget image  _image_wrap text_position_bottom hover_text_position_bottom visibility hover_image_hidden hover_img_hide   ">
-								<div class="_img_box img_wrap"><img
-										id="img_w202407152acd629bbd809" src="./source/2e14edfe05b7a.png"
+								<div class="_img_box img_wrap"><img id="img_w202407152acd629bbd809"
+										src="./source/2e14edfe05b7a.png"
 										style="visibility: visible; image-rendering: -webkit-optimize-contrast; display: block; width: 100%; height: auto;"
 										class=" org_image" alt="">
 								</div>
@@ -13182,7 +13182,7 @@
 								data-widget-parent-is-mobile="Y">
 
 								<span id="span">
-									<p id="map">경기도 광주시 곤지암읍 경충대로 727 </p>
+									<p id="map">경기도 광주시 곤지암읍 경충대로 727</p>
 									<p id="map2" style="font-weight:bold">곤지암 도자공원</p>
 								</span>
 								<button id="map_btn" onclick="copy(&#39;map&#39;);return false;">복사하기</button>
@@ -13568,6 +13568,7 @@
 	<script src="./source/jquery.fileupload.js.다운로드"></script>
 	<script src="./source/jquery.lazyload.min.js.다운로드"></script>
 	<script src="./source/KR_KRW_currency.js.다운로드"></script>
+
 	<script>
 		LOCALIZE.설명_전체평점보기 = function () { return LOCALIZE.convArguments("전체 평점 보기", arguments); };
 		LOCALIZE.설명_나쁨 = function () { return LOCALIZE.convArguments("나쁨", arguments); };
@@ -14501,18 +14502,16 @@ End Function
 			}, times);
 		});
 
-
 		function copy(id) {
-			var r = document.createRange();
-			r.selectNode(document.getElementById(id));
-			window.getSelection().removeAllRanges();
-			window.getSelection().addRange(r);
+			const text = document.getElementById(id).textContent;
+			const textarea = document.createElement('textarea');
+			textarea.value = text;
+			document.body.appendChild(textarea);
+			textarea.select();
 			document.execCommand('copy');
+			document.body.removeChild(textarea);
 			alert("복사되었습니다");
-			window.getSelection().removeAllRanges();
 		}
-
-
 
 		$("#text_w2024102546ad24c39e291").find("._table_responsive").addClass("table").wrap($("<div />").addClass("table-responsive"));
 
@@ -14522,21 +14521,7 @@ End Function
 			$('#img_w20240715aebae2b19ba33').data('image_resize', img_w20240715aebae2b19ba33);
 		});
 
-
-		function copy(id) {
-			var r = document.createRange();
-			r.selectNode(document.getElementById(id));
-			window.getSelection().removeAllRanges();
-			window.getSelection().addRange(r);
-			document.execCommand('copy');
-			alert("복사되었습니다");
-			window.getSelection().removeAllRanges();
-		}
-
-
-
 		function clip() {
-
 			var url = '';
 			var textarea = document.createElement("textarea");
 			document.body.appendChild(textarea);
