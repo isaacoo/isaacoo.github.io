@@ -12491,8 +12491,7 @@
 								<img id="btn-icon" src="./source/sound_off.png" alt="재생 버튼">
 							</button>
 
-							<audio id="bgm" src="https://jeajinwow.mycafe24.com/bgm/5.mp4" loop=""
-								preload="auto"></audio>
+							<audio id="bgm" src="https://jeajinwow.mycafe24.com/bgm/5.mp4"></audio>
 
 						</div>
 					</div>
@@ -14268,22 +14267,6 @@ End Function
 		// event fullpage
 		document.addEventListener('fullscreenchange', handleFullscreenChange);
 
-		// 비주얼섹션 배경 동영상 및 동영상 위젯 자동재생 환경 설정
-		var section_youtube_list = [];
-		var yt_player = {};
-		var vimeo_player = [];
-		var site_video_list = [];
-		var video_autoplay_youtube_list = [];
-		function onYouTubeIframeAPIReady() {
-			$.each(section_youtube_list, function (_e, _data) {
-				yt_player[_data.slide_code] = new SITE_SECTION_YOUTUBE();
-				yt_player[_data.slide_code].init(_data.type, _data.code, _data.id, _data.slide_code);
-			});
-			$.each(video_autoplay_youtube_list, function (k, v) {
-				site_video_list[v].play();
-			})
-		}
-
 		$(function () {
 			/* Bootstrap Sanitizer Custom */
 			var customTooltipAllowList = $.fn.tooltip.Constructor.DEFAULTS.whiteList;
@@ -14316,7 +14299,6 @@ End Function
 		var btnIcon = document.getElementById('btn-icon');
 
 		// 페이지가 로드되면 자동으로 재생
-		// bgm.play();
 		btnIcon.src = "./source/sound_off.png"; // 처음에는 재생 중이므로 재생 아이콘으로 설정
 
 		playBtn.addEventListener('click', function () {
@@ -14344,13 +14326,6 @@ End Function
 		});
 
 		$("#text_w20240715eb403441c2fac").find("._table_responsive").addClass("table").wrap($("<div />").addClass("table-responsive"));
-
-		// $(function () {
-		// 	var img_w2024071573188786165c6 = new IMAGE_RESIZE();
-		// 	img_w2024071573188786165c6.init('w2024071573188786165c6', { "img_width": 2161, "img_height": 1365, "img_ratio": "0.47", "img_init": "N", "url": "S20240430d137232320071\/5a8eb2ad23616.png", "description": "", "hover_description": "", "text_position": "bottom", "hover_text_position": "same", "overlay_color": "rgba(0, 0, 0, 0)", "hover_overlay_color": "rgba(0, 0, 0, 0)", "text_color": "#fff", "hover_text_color": "#fff", "text_size": "14", "hover_text_size": "14", "show_over": "N", "link": "", "link_code": "", "use_link_code": "N", "new_window": "N", "circle": "N", "lightbox": "N", "org_size": "Y", "use_hd": "N", "grayscale": "N", "hover_grayscale": "N", "image_rendering": "Y", "border_radius": "N", "hide_default_img": "N", "border_radius_value": "7", "text_align": "0 50%", "hover_text_align": "0 50%", "ani_type": "none", "ani_duration": "0.7", "ani_delay": "0", "idx": "87345048", "member": "", "code": "f20240518aae0f5ec32e08", "site_code": "S20240430d137232320071", "tmp_idx": "", "target_code": "w20240518bf7dd23c7580f", "target": "image_widget", "name": "5a8eb2ad23616.png", "org_name": "\u1107\u1169\u11bc\u1110\u116e.png", "down_cnt": "0", "type": "image\/png", "size": "2763197", "version_data": "", "wtime": "", "mtime": "", "error": "", "doz_img": "N", "is_image_edit": "N", "grid_height": "167", "fix_height": "Y", "thumb_url": "https:\/\/cdn.imweb.me\/thumbnail\/20240518\/120a3c2968419.png", "hover_thumb_url": "https:\/\/cdn.imweb.me\/thumbnail\/20240518\/120a3c2968419.png", "hover_img_url": "S20240430d137232320071\/5a8eb2ad23616.png" });
-		// 	$('#img_w2024071573188786165c6').data('image_resize', img_w2024071573188786165c6);
-		// });
-
 
 		$(function () {
 			var img_w20240715fa56000d51c64 = new IMAGE_RESIZE();
