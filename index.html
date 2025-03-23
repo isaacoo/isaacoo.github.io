@@ -7069,8 +7069,8 @@
 		}
 
 		#s20240715830435d2ee593.extend_section main {
-			/* padding-left: 10px;
-			padding-right: 10px; */
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 
 		#s20240715830435d2ee593.section_wrap.extend_section main .widget.board .grid_ignore.bg_on {
@@ -9983,8 +9983,8 @@
 		}
 
 		#s202407150455b170394b0.mobile_section main .inside {
-			/* padding-left: 10px;
-			padding-right: 10px; */
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 
 		#s202407150455b170394b0.section_wrap.extend_section main .widget.board .grid_ignore.bg_on {
@@ -12507,7 +12507,7 @@
 								class="widget image  _image_wrap text_position_bottom hover_text_position_bottom visibility hover_image_hidden hover_img_hide   ">
 								<div class="_img_box img_wrap " style="height: 540px;"><img
 										id="img_w2024071507b457f82577c" src="./source/22b672265732d.png"
-										style="visibility: visible; image-rendering: -webkit-optimize-contrast; display: block; width: auto; height: 100%; margin-top: 0px;"
+										style="visibility: visible; image-rendering: -webkit-optimize-contrast; display: block; width: 100%; height: auto; margin-top: 0px;"
 										class=" org_image" alt="">
 									<div class="_hover_image hover_img"
 										style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; background-image: url(&quot;https://cdn.imweb.me/thumbnail/20240518/22b672265732d.png&quot;); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;">
@@ -12710,7 +12710,7 @@
 								class="widget image  _image_wrap text_position_bottom hover_text_position_bottom visibility hover_image_hidden hover_img_hide   ">
 								<div class="_img_box img_wrap " style="height: 487px;"><img
 										id="img_w2024071517211105f4c78" src="./source/49401b3de9794.png"
-										style="visibility: visible; image-rendering: -webkit-optimize-contrast; display: block; width: auto; height: 100%; margin-top: 0px; margin-left: -0.0933022px;"
+										style="visibility: visible; image-rendering: -webkit-optimize-contrast; display: block; width: 100%; height: auto;"
 										class=" org_image" alt="">
 								</div>
 							</div>
@@ -12731,7 +12731,7 @@
 								class="widget image  _image_wrap text_position_bottom hover_text_position_bottom visibility hover_image_hidden hover_img_hide   ">
 								<div class="_img_box img_wrap " style="height: 487px;"><img
 										id="img_w202407152acd629bbd809" src="./source/2e14edfe05b7a.png"
-										style="visibility: visible; image-rendering: -webkit-optimize-contrast; display: block; width: auto; height: 100%; margin-top: 0px;"
+										style="visibility: visible; image-rendering: -webkit-optimize-contrast; display: block; width: 100%; height: auto;"
 										class=" org_image" alt="">
 								</div>
 							</div>
@@ -14267,6 +14267,22 @@ End Function
 		// event fullpage
 		document.addEventListener('fullscreenchange', handleFullscreenChange);
 
+		// 비주얼섹션 배경 동영상 및 동영상 위젯 자동재생 환경 설정
+		var section_youtube_list = [];
+		var yt_player = {};
+		var vimeo_player = [];
+		var site_video_list = [];
+		var video_autoplay_youtube_list = [];
+		function onYouTubeIframeAPIReady() {
+			$.each(section_youtube_list, function (_e, _data) {
+				yt_player[_data.slide_code] = new SITE_SECTION_YOUTUBE();
+				yt_player[_data.slide_code].init(_data.type, _data.code, _data.id, _data.slide_code);
+			});
+			$.each(video_autoplay_youtube_list, function (k, v) {
+				site_video_list[v].play();
+			})
+		}
+
 		$(function () {
 			/* Bootstrap Sanitizer Custom */
 			var customTooltipAllowList = $.fn.tooltip.Constructor.DEFAULTS.whiteList;
@@ -14316,14 +14332,6 @@ End Function
 			btnIcon.src = "./source/sound_off.png";
 		});
 
-
-
-
-		$(function () {
-			var img_w202407155f931d8cfe52a = new IMAGE_RESIZE();
-			img_w202407155f931d8cfe52a.init('w202407155f931d8cfe52a', { "img_width": 3240, "img_height": 1379, "img_ratio": "0.127", "img_init": "N", "url": "S20240430d137232320071\/c4edb9de85edc.png", "description": "", "hover_description": "", "text_position": "bottom", "hover_text_position": "same", "overlay_color": "rgba(0, 0, 0, 0)", "hover_overlay_color": "rgba(0, 0, 0, 0)", "text_color": "#fff", "hover_text_color": "#fff", "text_size": "14", "hover_text_size": "14", "show_over": "N", "link": "", "link_code": "", "use_link_code": "N", "new_window": "N", "circle": "N", "lightbox": "N", "org_size": "Y", "use_hd": "N", "grayscale": "N", "hover_grayscale": "N", "image_rendering": "Y", "border_radius": "N", "hide_default_img": "N", "border_radius_value": "7", "text_align": "0 50%", "hover_text_align": "0 50%", "ani_type": "none", "ani_duration": "0.7", "ani_delay": "0", "idx": "87344285", "member": "", "code": "f2024051868fb028d51fe7", "site_code": "S20240430d137232320071", "tmp_idx": "", "target_code": "w20240518f74ff792d2618", "target": "image_widget", "name": "c4edb9de85edc.png", "org_name": "\u1103\u1162\u110c\u1175 1 \u1109\u1161\u1107\u1169\u11ab.png", "down_cnt": "0", "type": "image\/png", "size": "123219", "version_data": "", "wtime": "", "mtime": "", "error": "", "doz_img": "N", "is_image_edit": "N", "grid_height": "45", "fix_height": "Y", "thumb_url": "https:\/\/cdn.imweb.me\/thumbnail\/20240518\/20cd9eb5883de.png", "hover_thumb_url": "https:\/\/cdn.imweb.me\/thumbnail\/20240518\/20cd9eb5883de.png", "hover_img_url": "S20240430d137232320071\/c4edb9de85edc.png" });
-			$('#img_w202407155f931d8cfe52a').data('image_resize', img_w202407155f931d8cfe52a);
-		});
 
 		$("#text_w20240715eb403441c2fac").find("._table_responsive").addClass("table").wrap($("<div />").addClass("table-responsive"));
 
